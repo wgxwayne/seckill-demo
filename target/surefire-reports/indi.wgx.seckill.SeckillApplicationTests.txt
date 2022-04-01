@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: indi.wgx.seckill.SeckillApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.741 s - in indi.wgx.seckill.SeckillApplicationTests
