@@ -88,5 +88,8 @@ mybatis-plus:
 logging:
   level:
     indi.wgx.seckill.mapper: debug
+  file:
+    name: seckill-log
+    path: E:\IdeaProject\seckill-demo
 server:
   port: 8081

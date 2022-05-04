@@ -67,7 +67,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
      * @return
      */
     @Override
-    @Transactional
+    @Transactional  // 添加事务控制并不能保证减库存方法secKill()执行的原子性，代码仍然会并发执行。
     public Order seckill(User user, GoodsVo goods) {
         ValueOperations<String, Object> valueOperations = redisTemplate.opsForValue();
 
@@ -91,7 +91,8 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
 
         seckillGoodsService.update(new UpdateWrapper<SeckillGoods>()
                 //用SQL语句扣库存
-                .setSql("stock_count = " + "stock_count-1")
+                .setSql("stock_count = " + "stock_count-" +
+                        "1")
                 .eq("goods_id", goods.getId())
                 // 判断库存大于0
                 .gt("stock_count", 0)

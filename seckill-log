@@ -1,0 +1,40 @@
+2022-05-04 19:34:44.892  INFO 59472 --- [main] indi.wgx.seckill.SeckillApplication      : Starting SeckillApplication using Java 1.8.0_311 on LAPTOP-XIAOWEI with PID 59472 (E:\IdeaProject\seckill-demo\target\classes started by 38454 in E:\IdeaProject\seckill-demo)
+2022-05-04 19:34:44.895  INFO 59472 --- [main] indi.wgx.seckill.SeckillApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-05-04 19:34:45.541  INFO 59472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-04 19:34:45.542  INFO 59472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-05-04 19:34:45.572  INFO 59472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2022-05-04 19:34:46.239  INFO 59472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-05-04 19:34:46.246  INFO 59472 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-04 19:34:46.246  INFO 59472 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-05-04 19:34:46.401  INFO 59472 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-04 19:34:46.402  INFO 59472 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1473 ms
+2022-05-04 19:34:47.865  INFO 59472 --- [main] com.zaxxer.hikari.HikariDataSource       : DateHikariCP - Starting...
+2022-05-04 19:34:48.030  INFO 59472 --- [main] com.zaxxer.hikari.HikariDataSource       : DateHikariCP - Start completed.
+2022-05-04 19:34:48.036 DEBUG 59472 --- [main] i.w.s.mapper.GoodsMapper.findGoodsVo     : ==>  Preparing: SELECT g.id, g.goods_name, g.goods_title, g.goods_img, g.goods_price, g.goods_stock, sg.seckill_price, sg.stock_count, sg.start_date, sg.end_date FROM t_goods g LEFT JOIN t_seckill_goods sg on g.id = sg.goods_id
+2022-05-04 19:34:48.047 DEBUG 59472 --- [main] i.w.s.mapper.GoodsMapper.findGoodsVo     : ==> Parameters: 
+2022-05-04 19:34:48.061 DEBUG 59472 --- [main] i.w.s.mapper.GoodsMapper.findGoodsVo     : <==      Total: 2
+2022-05-04 19:34:49.174  INFO 59472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-05-04 19:34:49.176  INFO 59472 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-05-04 19:34:49.199  INFO 59472 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#74d6736:0/SimpleConnection@23b1aa9 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 51108]
+2022-05-04 19:34:49.244  INFO 59472 --- [main] indi.wgx.seckill.SeckillApplication      : Started SeckillApplication in 4.668 seconds (JVM running for 5.185)
+2022-05-04 19:34:59.740  INFO 59472 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-04 19:34:59.741  INFO 59472 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-04 19:34:59.741  INFO 59472 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-05-04 19:34:59.809 DEBUG 59472 --- [http-nio-8081-exec-1] i.w.s.mapper.GoodsMapper.findGoodsVo     : ==>  Preparing: SELECT g.id, g.goods_name, g.goods_title, g.goods_img, g.goods_price, g.goods_stock, sg.seckill_price, sg.stock_count, sg.start_date, sg.end_date FROM t_goods g LEFT JOIN t_seckill_goods sg on g.id = sg.goods_id
+2022-05-04 19:34:59.809 DEBUG 59472 --- [http-nio-8081-exec-1] i.w.s.mapper.GoodsMapper.findGoodsVo     : ==> Parameters: 
+2022-05-04 19:34:59.811 DEBUG 59472 --- [http-nio-8081-exec-1] i.w.s.mapper.GoodsMapper.findGoodsVo     : <==      Total: 2
+2022-05-04 19:35:02.476 DEBUG 59472 --- [http-nio-8081-exec-2] i.w.s.m.G.findGoodsVoByGoodsId           : ==>  Preparing: SELECT g.id, g.goods_name, g.goods_title, g.goods_img, g.goods_price, g.goods_stock, sg.seckill_price, sg.stock_count, sg.start_date, sg.end_date FROM t_goods g LEFT JOIN t_seckill_goods sg on g.id = sg.goods_id WHERE g.id=?
+2022-05-04 19:35:02.477 DEBUG 59472 --- [http-nio-8081-exec-2] i.w.s.m.G.findGoodsVoByGoodsId           : ==> Parameters: 1(Long)
+2022-05-04 19:35:02.478 DEBUG 59472 --- [http-nio-8081-exec-2] i.w.s.m.G.findGoodsVoByGoodsId           : <==      Total: 1
+2022-05-04 19:35:07.220 DEBUG 59472 --- [http-nio-8081-exec-5] i.w.s.m.G.findGoodsVoByGoodsId           : ==>  Preparing: SELECT g.id, g.goods_name, g.goods_title, g.goods_img, g.goods_price, g.goods_stock, sg.seckill_price, sg.stock_count, sg.start_date, sg.end_date FROM t_goods g LEFT JOIN t_seckill_goods sg on g.id = sg.goods_id WHERE g.id=?
+2022-05-04 19:35:07.221 DEBUG 59472 --- [http-nio-8081-exec-5] i.w.s.m.G.findGoodsVoByGoodsId           : ==> Parameters: 2(Long)
+2022-05-04 19:35:07.223 DEBUG 59472 --- [http-nio-8081-exec-5] i.w.s.m.G.findGoodsVoByGoodsId           : <==      Total: 1
+2022-05-04 19:35:12.751 DEBUG 59472 --- [http-nio-8081-exec-6] i.w.s.m.G.findGoodsVoByGoodsId           : ==>  Preparing: SELECT g.id, g.goods_name, g.goods_title, g.goods_img, g.goods_price, g.goods_stock, sg.seckill_price, sg.stock_count, sg.start_date, sg.end_date FROM t_goods g LEFT JOIN t_seckill_goods sg on g.id = sg.goods_id WHERE g.id=?
+2022-05-04 19:35:12.752 DEBUG 59472 --- [http-nio-8081-exec-6] i.w.s.m.G.findGoodsVoByGoodsId           : ==> Parameters: 1(Long)
+2022-05-04 19:35:12.753 DEBUG 59472 --- [http-nio-8081-exec-6] i.w.s.m.G.findGoodsVoByGoodsId           : <==      Total: 1
+2022-05-04 19:35:38.516 DEBUG 59472 --- [http-nio-8081-exec-9] i.w.s.m.G.findGoodsVoByGoodsId           : ==>  Preparing: SELECT g.id, g.goods_name, g.goods_title, g.goods_img, g.goods_price, g.goods_stock, sg.seckill_price, sg.stock_count, sg.start_date, sg.end_date FROM t_goods g LEFT JOIN t_seckill_goods sg on g.id = sg.goods_id WHERE g.id=?
+2022-05-04 19:35:38.517 DEBUG 59472 --- [http-nio-8081-exec-9] i.w.s.m.G.findGoodsVoByGoodsId           : ==> Parameters: 1(Long)
+2022-05-04 19:35:38.520 DEBUG 59472 --- [http-nio-8081-exec-9] i.w.s.m.G.findGoodsVoByGoodsId           : <==      Total: 1
+2022-05-04 19:35:40.722 DEBUG 59472 --- [http-nio-8081-exec-10] i.w.s.m.G.findGoodsVoByGoodsId           : ==>  Preparing: SELECT g.id, g.goods_name, g.goods_title, g.goods_img, g.goods_price, g.goods_stock, sg.seckill_price, sg.stock_count, sg.start_date, sg.end_date FROM t_goods g LEFT JOIN t_seckill_goods sg on g.id = sg.goods_id WHERE g.id=?
+2022-05-04 19:35:40.722 DEBUG 59472 --- [http-nio-8081-exec-10] i.w.s.m.G.findGoodsVoByGoodsId           : ==> Parameters: 2(Long)
+2022-05-04 19:35:40.725 DEBUG 59472 --- [http-nio-8081-exec-10] i.w.s.m.G.findGoodsVoByGoodsId           : <==      Total: 1
